@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.view {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			padding: 10px 60px;
+			box-sizing: border-box;
+		}
+
+		.view-title {
+			width: 100%;
+			height: 40px;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.view-title>span {
+			color: rgb(153, 71, 68);
+		}
+
+		.view-list {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.view-item {
+			width: 25%;
+			padding: 0 10px 20px 0;
+			box-sizing: border-box;
+		}
+
+		.view-item-content {
+			width: 100%;
+			height: 100%;
+			padding: 30px 5%;
+			box-sizing: border-box;
+			background-color: rgb(235, 235, 235);
+		}
+
+		.view-item-title {
+			width: 100%;
+			font-size: 20px;
+			line-height: 1;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.view-item-header {
+			width: 120px;
+			height: 120px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.view-item-name {
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			color: rgb(153, 71, 68);
+			font-weight: bold;
+		}
+
+		.item-message {
+			width: 100%;
+			display: flex;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="view">
+		<div class="view-title">
+			<span>All</span>
+			JavaScript Ruby Java CSS Python
+		</div>
+		<div class="view-list">
+
+		</div>
+	</div>
+	<script>
+		let dataList = [{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		},{
+			name: "斌斌斌",
+			user: "vue.js",
+			stars: "300,200",
+			forks: "23,079",
+			issues: "370"
+		}]
+		let htmlDom = "";
+		for (let i in dataList) {
+			let item = dataList[i];
+			htmlDom += `
+		<div class="view-item">
+				<div class="view-item-content">
+					<div class="view-item-title">#${i}</div>
+					<img class="view-item-header"
+						src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1582000859&di=2ed038936ad16458021ff1904087f65a&src=http://b-ssl.duitang.com/uploads/item/201807/09/20180709235634_HEh8H.thumb.700_0.jpeg"
+						alt="">
+					<div class="view-item-name">${item.name}</div>
+					<div class="item-message" style="font-weight: bold;">
+						<i class="fa fa-user" style="width:14px; font-size: 14px;color:rgb(153, 71, 68);margin-right: 5px;"
+							aria-hidden="true"></i>
+						${item.user}
+					</div>
+					<div class="item-message">
+						<i class="fa fa-star" style="width:14px;font-size: 14px;color:rgb(225,215,0);margin-right: 5px"
+							aria-hidden="true"></i>
+						${item.stars} stars
+					</div>
+					<div class="item-message">
+						<i class="fa fa-code-fork" style="width:14px;font-size: 14px;color:rgb(129,125,245);margin-right: 5px"
+							aria-hidden="true"></i>
+						${item.forks} forks
+					</div>
+					<div class="item-message">
+						<i class="fa fa-exclamation-triangle"
+							style="width:14px;font-size: 14px;color:rgb(214,138,146);margin-right: 5px" aria-hidden="true"></i>
+						${item.issues} open issues
+					</div>
+				</div>
+			</div>
+		`;
+		}
+
+		document.getElementsByClassName("view-list")[0].innerHTML = htmlDom;
+
+
+	</script>
+
+
+</body>
+
+</html>
